@@ -1,4 +1,4 @@
-import aal
+import paling
 import pytest
 from tests.utils import TEST_DATA_DIR
 

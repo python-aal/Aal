@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 // Point Eel web socket to the instance
-export const eel = window.eel
+export const paling = window.paling
 paling.set_host('ws://localhost:8080')
 
 // Expose the `sayHelloJS` function to Python as `say_hello_js`

@@ -5,7 +5,7 @@ import platform
 import random
 import sys
 
-import aal
+import paling
 
 # Use latest version of Eel from parent directory
 sys.path.insert(1, '../../')

@@ -1,4 +1,4 @@
-import aal
+import paling
 
 # Set web files folder
 paling.init('web')

@@ -4,7 +4,7 @@ import sys
 
 # Use latest version of Eel from parent directory
 sys.path.insert(1, '../../')
-import aal
+import paling
 
 # Use the same static files as the original Example
 os.chdir(os.path.join('..', '01 - hello_world'))

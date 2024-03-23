@@ -1,4 +1,4 @@
-import aal, os, random
+import paling, os, random
 
 paling.init('web')
 

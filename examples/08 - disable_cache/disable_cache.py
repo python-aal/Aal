@@ -1,4 +1,4 @@
-import aal
+import paling
 
 # Set web files folder and optionally specify which file types to check for paling.expose()
 paling.init('web')
