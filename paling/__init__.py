@@ -26,8 +26,8 @@ import mimetypes
 
 
 mimetypes.add_type('application/javascript', '.js')
-_aal_js_file: str = pkg.resource_filename('paling', 'paling.js')
-_aal_js: str = open(_aal_js_file, encoding='utf-8').read()
+_paling_js_file: str = pkg.resource_filename('paling', 'paling.js')
+_paling_js: str = open(_paling_js_file, encoding='utf-8').read()
 _websockets: List[Tuple[Any, WebSocketT]] = []
 _call_return_values: Dict[Any, Any] = {}
 _call_return_callbacks: Dict[float, Tuple[Callable[..., Any], Optional[Callable[..., Any]]]] = {}
@@ -184,9 +184,9 @@ def start(*start_urls: str, **kwargs: Any) -> None:
         app = _start_args['app']
 
         if isinstance(app, btl.Bottle):
-            register_aal_routes(app)
+            register_paling_routes(app)
         else:
-            register_aal_routes(btl.default_app())
+            register_paling_routes(btl.default_app())
 
         btl.run(
             host=HOST,
@@ -215,12 +215,12 @@ def spawn(function: Callable[..., Any], *args: Any, **kwargs: Any) -> gvt.Greenl
 
 # Bottle Routes
 
-def _aal() -> str:
+def _paling() -> str:
     start_geometry = {'default': {'size': _start_args['size'],
                                   'position': _start_args['position']},
                       'pages':   _start_args['geometry']}
 
-    page = _aal_js.replace('/** _py_functions **/',
+    page = _paling_js.replace('/** _py_functions **/',
                            '_py_functions: %s,' % list(_exposed_functions.keys()))
     page = page.replace('/** _start_geometry **/',
                         '_start_geometry: %s,' % _safe_json(start_geometry))
@@ -277,18 +277,18 @@ def _websocket(ws: WebSocketT) -> None:
 
 
 BOTTLE_ROUTES: Dict[str, Tuple[Callable[..., Any], Dict[Any, Any]]] = {
-    "/paling.js": (_aal, dict()),
+    "/paling.js": (_paling, dict()),
     "/": (_root, dict()),
     "/<path:path>": (_static, dict()),
     "/paling": (_websocket, dict(apply=[wbs.websocket]))
 }
 
-def register_aal_routes(app: btl.Bottle) -> None:
+def register_paling_routes(app: btl.Bottle) -> None:
     '''
     Adds paling routes to `app`. Only needed if you are passing something besides `bottle.Bottle` to `paling.start()`.
     Ex:
     app = bottle.Bottle()
-    paling.register_aal_routes(app)
+    paling.register_paling_routes(app)
     middleware = beaker.middleware.SessionMiddleware(app)
     paling.start(app=middleware)
     '''

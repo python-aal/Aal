@@ -9,14 +9,15 @@ Paling is a updated version of Eel, the Python library for making simple Electro
 
 > **Eel hosts a local webserver, then lets you annotate functions in Python so that they can be called from Javascript, and vice versa.**
 
-Eel is designed to take the hassle out of writing short and simple GUI applications. If you are familiar with Python and web development, probably just jump to [this example](https://github.com/ChrisKnott/Eel/tree/master/examples/04%20-%20file_access) which picks random file names out of the given folder (something that is impossible from a browser).
+Eel was designed to take the hassle out of writing short and simple GUI applications. If you are familiar with Python and web development, probably just jump to [this example](https://github.com/ChrisKnott/Eel/tree/master/examples/04%20-%20file_access) which picks random file names out of the given folder (something that is impossible from a browser).
 
 <p align="center"><img src="https://raw.githubusercontent.com/samuelhwilliams/Eel/master/examples/04%20-%20file_access/Screenshot.png" ></p>
 
 <!-- TOC -->
 
-- [Eel](#eel)
+- [Paling](#paling)
   - [Intro](#intro)
+  - [Credits](#credits)
   - [Install](#install)
   - [Usage](#usage)
     - [Directory Structure](#directory-structure)
@@ -36,7 +37,6 @@ Eel is designed to take the hassle out of writing short and simple GUI applicati
 
 ## Intro
 
-Eel has always been our favorite library for writing UI's in python, because it made it very simple to create a beautiful interface. Unfortunately the project has not been maintained, and now we are taking over.
 
 There are several options for making GUI apps in Python, but if you want to use HTML/JS (in order to use jQueryUI or Bootstrap, for example) then you generally have to write a lot of boilerplate code to communicate from the Client (Javascript) side to the Server (Python) side.
 
@@ -46,7 +46,10 @@ Eel is not as fully-fledged as Electron or cefpython - it is probably not suitab
 
 For some reason many of the best-in-class number crunching and maths libraries are in Python (Tensorflow, Numpy, Scipy etc) but many of the best visualization libraries are in Javascript (D3, THREE.js etc). Hopefully Eel makes it easy to combine these into simple utility apps for assisting your development.
 
-Join Eel's users and maintainers on [Discord](https://discord.com/invite/3nqXPFX), if you like.
+## Credits
+
+Eel has always been our favorite library for writing UI's in python, because it made it very simple to create a beautiful interface. Unfortunately the project has not been maintained, and now we are taking over, starting by merging all viable PRs and updating the code to python 3.12
+
 
 ## Install
 
