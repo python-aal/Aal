@@ -27,8 +27,8 @@ web_folder: str = args.web_folder
 print("Building executable with main script '%s' and web folder '%s'...\n" %
       (main_script, web_folder))
 
-aal_js_file: str = pkg.resource_filename('paling', 'paling.js')
-js_file_arg: str = '%s%saal' % (aal_js_file, os.pathsep)
+paling_js_file: str = pkg.resource_filename('paling', 'paling.js')
+js_file_arg: str = '%s%spaling' % (paling_js_file, os.pathsep)
 web_folder_arg: str = '%s%s%s' % (web_folder, os.pathsep, web_folder)
 
 needed_args: List[str] = ['--hidden-import', 'bottle_websocket',
