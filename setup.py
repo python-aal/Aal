@@ -14,7 +14,7 @@ dependencies = [
 
 setup(
     name='Paling',
-    version='0.16.3',
+    version='0.16.4',
     author='OpenSource Team - Roborian',
     author_email='info@roborian.com',
     url='https://github.com/python-paling/Paling',

@@ -1,5 +1,9 @@
 # Change log
 
+### v0.16.4
+* Add support for Python versions 3.12
+* Pyinstaller fixes
+
 ### v0.16.0
 * Drop support for Python versions below 3.7
 
